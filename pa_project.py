@@ -27,10 +27,11 @@ def load_data():
     Loads and cleans data from the CSV file.
     Returns a Pandas DataFrame.
     """
-    # Hardcoded path split to respect character limit
-    file_path = (
-        "C:/Users/alexp/OneDrive/Bureau/TBS/M2/S1/"
-        "advenced python/Projet/venv/Historical Product Demand.csv"
+    # Use local file path
+    import os
+    file_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "Historical Product Demand.csv"
     )
 
     # Direct loading without error handling as requested
